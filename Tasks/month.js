@@ -1,15 +1,15 @@
 // Get month number
 'use strict'
 
-const Months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 
-const Month = (s) => {
+const monthOrder = (stringOfMonth) => {
 
-  for (let i = 0; i < Months.length; i++)
+  for (let i = 0; i < months.length; i++)
   {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+    if (stringOfMonth.toLowerCase().startsWith(months[i])) return i + 1;
   }
   return -1;
 };
 
-module.exports = Month;
+module.exports = monthOrder;
