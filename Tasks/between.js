@@ -3,7 +3,9 @@
 
 const getvaluebetween = (str, p, s) => {
   let i = str.indexOf(p);
-  if (i === -1) return '';
+  if (i === -1) {
+    return '';
+  }
   else {
     let k = i + p.length;
     str = str.substring(k);
