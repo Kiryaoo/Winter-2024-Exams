@@ -1,9 +1,9 @@
 // Get month number
+'use strict'
 
+const Months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 
-Months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
-
-Month = (s) => {
+const Month = (s) => {
   l = Months.length;
   for (let i = 0; i < l; i++)
   {
