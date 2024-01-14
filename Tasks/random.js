@@ -2,13 +2,8 @@
 'use strict';
 
 const random = (min, max) => {
-  let result;
-  if (max === undefined) {
-    max = min;
-    return Math.floor(Math.random() * (max + 1));
-  } else {
-    return min + Math.floor(Math.random() * (max - min + 1));
-  }
-}
 
+  let result = min + Math.floor(Math.random() * (max - min + 1));
+  return result;
+}
 module.exports = random;
