@@ -2,6 +2,7 @@
 'use strict';
 
 const random = (min, max) => {
+  let result;
   if (max === undefined) {
     max = min;
     return Math.floor(Math.random() * (max + 1));
