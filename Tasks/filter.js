@@ -1,9 +1,11 @@
 // Filter array by type name
 
-Filter = (T, t) => {
-  remove = [];
+'use strict'
+
+const Filter = (T, t) => {
+  let remove = [];
   for (C of T) {
-    x = T.indexOf(C);
+    let x = T.indexOf(C);
     if (typeof T[x] !== t) {
       remove.unshift(x);
     }
