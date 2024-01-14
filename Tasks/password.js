@@ -3,10 +3,10 @@
 'use strict'
 
 const GeneratePassword = (alphabet, length) => {
-  const MAX = alphabet.length;
+
   let key = '';
   for (let i = 0; i < length; i++) {
-    let Index = Math.floor(Math.random() * MAX);
+    let Index = Math.floor(Math.random() * alphabet.length);
     key = key + alphabet[Index];
   }
   return key;
