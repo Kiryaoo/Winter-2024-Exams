@@ -2,19 +2,19 @@
 'use strict'
 
 const getvaluebetween = (str, p, s) => {
-  let i = str.indexOf(p);
-  if (i === -1) {
+
+  if (str.indexOf(p) === -1) {
     return '';
   }
   else {
-    let k = i + p.length;
-    str = str.substring(k);
+
+    str = str.substring(str.indexOf(p)+p.length);
     if (s) {
-      i = str.indexOf(s);
-      if (i === -1) {
+
+      if (str.indexOf(s) === -1) {
         return '';
       } else {
-        str = str.substring(0, i);
+        str = str.substring(0, str.indexOf(s));
       }
     }
   }
