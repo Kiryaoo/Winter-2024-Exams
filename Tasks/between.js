@@ -2,19 +2,20 @@
 "use strict";
 
 const getValueBetween = (str, prefix, suffix) => {
-  if (str.indexOf(prefix) === -1) {
+  const prefixIndex = str.indexOf(prefix);
+
+  if (prefixIndex === -1) {
     return "";
-  } else {
-    str = str.substring(str.indexOf(prefix) + prefix.length);
-    if (suffix) {
-      if (str.indexOf(suffix) === -1) {
-        return "";
-      } else {
-        str = str.substring(0, str.indexOf(suffix));
-      }
-    }
   }
-  return str;
+  let result = str.substring(prefixIndex + prefix.length);
+  if (suffix) {
+    const suffixIndex = result.indexOf(suffix);
+    if (suffixIndex === -1) {
+      return "";
+    }
+    result = result.substring(0, suffixIndex);
+  }
+  return result;
 };
 
 module.exports = getValueBetween;
