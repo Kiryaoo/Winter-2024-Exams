@@ -1,9 +1,12 @@
-const count = (obj) => {
-  let sum = 0;
-  const keys = Object.keys(obj);
+// Sum all number values in dict
 
-  for (const key of keys) {
-    const value = obj[key];
+'use strict'
+
+const count = (obj) => {
+  const values = Object.values(obj);
+  let sum = 0;
+
+  for (const value of values) {
     if (typeof value === "number") {
       sum += value;
     }
